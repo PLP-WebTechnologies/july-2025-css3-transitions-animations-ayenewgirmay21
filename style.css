@@ -1,0 +1,52 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* ===== Part 1: CSS Transitions & Animations ===== */
+.animated-btn {
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.animated-btn:hover {
+  background-color: #2ecc71;
+  transform: scale(1.1);
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #e74c3c;
+  margin-top: 20px;
+  animation: slideAndFade 3s infinite alternate;
+}
+
+@keyframes slideAndFade {
+  0% { transform: translateX(0); opacity: 1; }
+  50% { transform: translateX(150px); opacity: 0.5; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+/* ===== Part 3: JS + CSS Animations ===== */
+.animated-box {
+  width: 100px;
+  height: 100px;
+  background-color: #9b59b6;
+  margin-top: 20px;
+  transition: transform 1s, background-color 1s;
+}
+
+.animated-box.animate {
+  transform: rotate(360deg) scale(1.5);
+  background-color: #f1c40f;
+}
